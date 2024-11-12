@@ -3,8 +3,8 @@ const form_numeros = document.getElementById('form_numeros');
 form_numeros.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let CampoA = document.getElementById('CampoA').value;
-    let CampoB = document.getElementById('CampoB').value;
+    let CampoA = parseFloat(document.getElementById('CampoA').value);
+    let CampoB = parseFloat(document.getElementById('CampoB').value);
 
     if (CampoA > CampoB) {
         mensagem.textContent = "O número do Campo A é maior que o número do Campo B";
