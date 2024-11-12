@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Validação de Números</title>
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Validação de Números com JavaScript</h1>
+            <p>Digite um número no campo "A" e outro no campo "B", ao clicar no botão o sistema irá dizer qual é o maior (verde) e menor (vermelho)</p>
+            <form id="form_numeros">
+                <table>
+                    <tr>
+                        <td width=15%><label id="CampoALabel">Campo A:</label></td>
+                        <td width=30%><input type="number" id="CampoA" placeholder="0" required></td>
+                        <td width=5% rowspan="2">   </td>
+                        <td width=50% rowspan="2"><div id="mensagem" class="message"></div></td>
+                    </tr>
+                    <tr>
+                        <td width=15%><label id="CampoBLabel">Campo B:</label></td>
+                        <td width=30%><input type="number" id="CampoB" placeholder="0" required></td>
+                    </tr>
+                    <tr><td colspan="4"><BR></td></tr>
+                    <tr>
+                        <td width=50% colspan="3" align="right"><button type="reset">Limpa Formulário</button></td>
+                        <td width=50% align="left"><button type="submit">Avaliar Números</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
