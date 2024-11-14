@@ -1,5 +1,5 @@
 # curso_ebac_frontend
-EBAC - Curso Full Stack Python - Tarefa Módulo 02
+EBAC - Curso Full Stack Python - Tarefa Módulo JQuery PlugIn
 
 Modificações realizadas em 13 de Novembro de 2024
 1 - Alteração no title de "Formulário de Cadastro - Módulo 10" para "EBAC Motors"
