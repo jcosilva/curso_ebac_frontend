@@ -1,0 +1,119 @@
+@import "mapas.less";
+
+// Breakpoints
+@BreakpointMobile: ~"(max-width: 767px)";
+@BreakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+//Variaveis Gerais
+@spacing: 8px;
+
+//Reset global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+// Componentes globais
+.marginBottom8 {
+    margin-bottom: @spacing;
+}
+
+// Header
+header {
+    background-color: #colors[BackgroundColor_HF];
+    color: #colors[TextColor_HF];
+    position: sticky;
+    top: 0;
+    left: 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2 * @spacing 0;
+    }
+}
+
+// Corpo
+body {
+    background-color: #colors[BackgroundColor_Body];
+    color: #colors[TextColor_Body];
+}
+
+li {
+    list-style: none;
+}
+
+// Container principal
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Produtos
+.product {
+    margin-top: 5 * @spacing;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    gap: 4%;
+    &-item img {
+        border-radius: 16px;
+        width: 100%;
+    }
+    &-button {
+        display: block;
+        background-color: #colors[ButtonColor];
+        color: #colors[TextColor_Button];
+        text-align: center;
+        padding: @spacing 0;
+        border-radius: @spacing;
+        margin-top: @spacing;
+        text-decoration: none;
+        &:hover {
+            background-color: #colors[ButtonColor_Hover];
+        }
+    }
+}
+
+// Menu
+.menu {
+    display: flex;
+    li {
+        font-weight: bold;
+        margin-left: 3 * @spacing;
+        a {
+            color: #colors[TextColor_HF];
+            text-decoration: none;
+        }
+    }
+}
+
+// Sessões
+section {
+    padding: 7 * @spacing 0;
+}
+
+// Media Queries
+@media screen and (@BreakpointTablet) {
+    .container {
+        max-width: 85%;
+    }
+    .product {
+        grid-template-columns: repeat(2, 48.5%);
+        gap: 3%;
+    }
+}
+
+@media screen and (@BreakpointMobile) {
+    .container {
+        max-width: 70%;
+    }
+    .product {
+        display: block;
+        &-item {
+            margin-bottom: 4 * @spacing;
+        }
+    }
+}
