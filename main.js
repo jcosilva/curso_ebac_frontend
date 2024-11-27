@@ -33,4 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //Link para a página do GitHub do Usuário
             LinkElement.href = json.html_url
         })
+        .catch(function(erro) {
+            alert("Ocorreu um erro ao buscar os dados do GitHub, por favor tente novamente mais tarde");
+        })
 })
